@@ -1,0 +1,37 @@
+// ========================================= //
+// global
+// ========================================= //
+.row{
+    width: 100vw;
+    margin: 0;
+}
+// var
+$image : '../../medias/images/';
+$transition: all 1s linear;
+$transition--2: all 0.5s linear;
+// ========================================= //
+// emRemConvert
+// ========================================= //
+
+$browser-context: 16; // Default
+
+// Convert px to em
+@function em($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}em
+}
+
+// Convert px to rem
+@function rem($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}rem
+}
+// ========================================= //
+// vwConvert
+// ========================================= //
+
+$width-context: 1500; // Default
+
+// Convert px to vw
+@function vw($pixels, $context: $width-context) {
+    @return #{($pixels/1500)*100}vw
+}
+
